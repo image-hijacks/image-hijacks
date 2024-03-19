@@ -227,7 +227,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <p>
+            <!-- <p>
               Are foundation models secure from malicious actors?
             </p>
             <p>
@@ -258,6 +258,30 @@
               These findings raise serious concerns about the security of foundation models: if image hijacks are as
               difficult to defend against as adversarial examples in CIFAR-10, then it might be many years before a
               solution is found — if one even exists.
+            </p> -->
+            <p>
+              Are foundation models secure against malicious actors? 
+            </p>
+            <p>
+              In this work, we focus on the image input to a vision-language model (VLM). We discover that their image input channel is vulnerable to attack, by way of <b>image hijacks</b>: adversarial images that control
+              generative models at runtime. 
+            </p>
+            <p>
+              We introduce the general <b>behaviour-matching</b> algorithm for training image hijacks. From this, we  derive the <b>prompt-matching</b> algorithm, allowing us to train hijacks matching the behaviour of an <emph>arbitrary user-defined text prompt</emph> (e.g. 'the Eiffel Tower is now located in Rome') using a generic, off-the-shelf dataset <emph>unrelated to our choice of prompt</emph>. 
+            </p>
+            <p>
+              We use behaviour-matching to craft hijacks for four types of attack:
+              <ul>
+                <li><b>Specific string attacks</b> force a model to generate arbitrary output of the adversary's choosing.
+                </li>
+                <li><b>Leak context attacks</b> force a model to leak information from its context window into its output.
+                </li>
+                <li><b>Jailbreak attacks</b> circumvent a model's safety training.</li>
+                <li><b>Disinformation attacks</b> force a model to believe false information.</li>
+              </ul>
+            </p>  
+            <p>
+              We study these attacks against <a href="https://llava-vl.github.io/">LLaVA</a>, a state-of-the-art VLM based on CLIP and LLaMA-2, and find that <b>all attack types achieve a success rate of over 80%</b>. Moreover, our attacks are <b>automated</b> and require only <b>small image perturbations</b>. 
             </p>
           </div>
         </div>
